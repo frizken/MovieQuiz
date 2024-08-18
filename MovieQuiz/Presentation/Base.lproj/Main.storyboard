@@ -51,7 +51,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="KN6-hA-9KY">
                                         <rect key="frame" x="20" y="754" width="374" height="60"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ado-hj-cXA" userLabel="yes">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ado-hj-cXA" userLabel="no">
                                                 <rect key="frame" x="0.0" y="0.0" width="177" height="60"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled">
@@ -67,10 +67,10 @@
                                                     <color key="baseBackgroundColor" name="YP White"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="yesButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1pu-vr-TC1"/>
+                                                    <action selector="noButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wRg-wA-FvJ"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="30F-xn-ZmS" userLabel="no">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="30F-xn-ZmS" userLabel="yes">
                                                 <rect key="frame" x="197" y="0.0" width="177" height="60"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled">
@@ -86,7 +86,7 @@
                                                     <color key="baseBackgroundColor" name="YP White"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="noButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4Ij-Py-yQm"/>
+                                                    <action selector="yesButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GEz-hL-5F1"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -117,7 +117,9 @@
                     <connections>
                         <outlet property="counterLabel" destination="Mfx-a9-9dn" id="hwW-aM-Sa0"/>
                         <outlet property="imageView" destination="BEQ-Q9-87H" id="u7s-jk-Reu"/>
+                        <outlet property="noButton" destination="Ado-hj-cXA" id="ZvK-cD-5Y0"/>
                         <outlet property="textLabel" destination="RbI-Bo-rwk" id="M3H-0u-Wb0"/>
+                        <outlet property="yesButton" destination="30F-xn-ZmS" id="lQJ-jO-qcp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
