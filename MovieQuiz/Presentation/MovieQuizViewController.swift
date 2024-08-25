@@ -10,14 +10,14 @@ final class MovieQuizViewController: UIViewController {
     
     @IBOutlet weak var yesButton: UIButton!
     
-    @IBAction private func yesButtonClicked(_ sender: UIButton) {
+    @IBAction func yesButtonClicked(_ sender: UIButton) {
         let currentQuestion = questions[currentQuestionIndex]
         let givenAnswer = true
         showAnswerResult(isCorrect: givenAnswer == currentQuestion.correctAnswer)
         yesButton.isEnabled = false
         noButton.isEnabled = false
     }
-    @IBAction private func noButtonClicked(_ sender: UIButton) {
+    @IBAction func noButtonClicked(_ sender: UIButton) {
         let currentQuestion = questions[currentQuestionIndex]
         let givenAnswer = false
         showAnswerResult(isCorrect: givenAnswer == currentQuestion.correctAnswer)
@@ -73,11 +73,10 @@ final class MovieQuizViewController: UIViewController {
             text: "Рейтинг этого фильма \n больше чем 6?",
             correctAnswer: false)
     ]
-    
     private struct QuizResultsViewModel {
-      let title: String
-      let text: String
-      let buttonText: String
+        let title: String
+        let text: String
+        let buttonText: String
     }
     
     private struct QuizStepViewModel {
@@ -159,18 +158,17 @@ final class MovieQuizViewController: UIViewController {
             
             self.currentQuestionIndex = 0
             self.correctAnswers = 0
-
+            
             let firstQuestion = self.questions[self.currentQuestionIndex]
             let viewModel = self.convert(model: firstQuestion)
             self.show(quiz: viewModel)
         }
         alert.addAction(action)
-
+        
         self.present(alert, animated: true, completion: nil)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
         showCurrentQuestion()
-        
     }
 }
